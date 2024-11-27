@@ -3,4 +3,6 @@
     <string name="welcome">Welcome</string>
     <string name="hint">usuario</string>
     <string name="btnStart">Next</string>
+    <string name="btnContact">Contactar</string>
+    <string name="Credit">"%s, estás usando la versión 1 de %s"</string>
 </resources>

@@ -44,7 +44,7 @@
             />
 
         <EditText
-            android:id="@+id/tvHint"
+            android:id="@+id/etHint"
             android:layout_width="200dp"
             android:layout_height="0dip"
             android:layout_weight="2"
