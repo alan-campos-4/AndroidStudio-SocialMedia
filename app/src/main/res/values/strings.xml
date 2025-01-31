@@ -11,8 +11,18 @@
     <string name="hello_view_pager">This is the tab selection</string>
     <string name="tab1_message">This is tab 1.</string>
     <string name="tab2_message">This is tab 2.</string>
+    <string name="menu_message">This is the menu.</string>
+    <string name="credit_message">These are the credits.</string>
     <string name="tab1_name">T1</string>
     <string name="tab2_name">T2</string>
     <string name="tabs_vp_message">Select the tab</string>
     <string name="btnMenu">Open menu</string>
+
+    <string name="album_tag_1">Name: </string>
+    <string name="album_tag_2">Artist: </string>
+    <string name="album_tag_3">Year: </string>
+    <string name="album_placeholder_1">---</string>
+    <string name="album_placeholder_2">...</string>
+    <string name="album_placeholder_3">____</string>
+    <string name="album_desc">Album Image</string>
 </resources>

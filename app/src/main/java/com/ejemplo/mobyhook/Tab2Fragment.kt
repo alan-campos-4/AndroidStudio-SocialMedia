@@ -19,12 +19,11 @@ class Tab2Fragment : Fragment() {
         _binding = FragmentTab2Binding.inflate(inflater,container,false)
         return binding.root
     }
-/*
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnMenu.setOnClickListener {
-            findNavController().navigate(R.id.action_noticeFragment_to_menuFragment)
+        binding.btnTab2.setOnClickListener {
+            findNavController().navigate(R.id.action_tab2Fragment_to_recyclerViewMenuFragment)
         }
     }
- */
 }

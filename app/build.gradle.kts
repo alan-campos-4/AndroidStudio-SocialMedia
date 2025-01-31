@@ -39,6 +39,9 @@ android {
 }
 
 dependencies {
+    //implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.glide)
+
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
