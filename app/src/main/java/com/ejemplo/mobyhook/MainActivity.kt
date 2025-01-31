@@ -13,13 +13,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ejemplo.mobyhook.databinding.FragmentMenuRvBinding
 
 class MainActivity : AppCompatActivity() {
-    /*override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-    }*/
+    }
 
+
+
+
+    /*
     private lateinit var binding : FragmentMenuRvBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,4 +55,8 @@ class MainActivity : AppCompatActivity() {
             Toast.LENGTH_SHORT
         ).show()
     }
+    */
+
+
+
 }

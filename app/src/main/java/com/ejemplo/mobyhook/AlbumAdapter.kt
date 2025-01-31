@@ -1,12 +1,41 @@
 package com.ejemplo.mobyhook
 
-import android.content.DialogInterface.OnClickListener
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.ejemplo.mobyhook.Album
-import com.ejemplo.mobyhook.R
 
+class Adapter (private val albumList: ArrayList<Album>):
+    RecyclerView.Adapter<Adapter.MyViewHolder>() {
+
+    // This method creates a new ViewHolder object for each item in the RecyclerView
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+        // Inflate the layout for each item and return a new ViewHolder object
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_album, parent, false)
+        return MyViewHolder(itemView)
+    }
+
+    // This method returns the total number of items in the data set
+    override fun getItemCount(): Int = albumList.size
+
+    // This method binds the data to the ViewHolder object for each item in the RecyclerView
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        val currentAlbum = albumList[position]
+        holder.name.text = currentAlbum.name
+        holder.artist.text = currentAlbum.artist
+        holder.year.text = currentAlbum.year.toString()
+    }
+
+    // This class defines the ViewHolder object for each item in the RecyclerView
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val name: TextView = itemView.findViewById(R.id.tvAlbumName)
+        val artist: TextView = itemView.findViewById(R.id.tvAlbumArtist)
+        val year: TextView = itemView.findViewById(R.id.tvAlbumYear)
+    }
+}
+
+/*
 class AlbumAdapter (
     private val albumList:List<Album>,
     private val onClickListener:(Album) -> Unit
@@ -26,7 +55,7 @@ class AlbumAdapter (
         holder.render(itemAlbum,onClickListener)
     }
 }
-
+*/
 
 /*
 package com.example.ejemplorecyclerview.adapter

@@ -4,17 +4,32 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.fragment.app.Fragment
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ejemplo.mobyhook.AlbumAdapter
-import com.ejemplo.mobyhook.databinding.FragmentMenuRvBinding
+import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerViewMenuFragment : Fragment() {
-    ///*
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_menu_rv, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val albumList = Constants.getAlbumData()
+        val itemAdapter = Adapter(albumList)
+
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerViewMenuFragment)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = itemAdapter
+    }
+
+
+
+/*
     private var _binding : FragmentMenuRvBinding? = null
     private val binding get() = _binding!!
 
@@ -26,7 +41,7 @@ class RecyclerViewMenuFragment : Fragment() {
         return binding.root
     }
 
-//*/
+*/
 
 
     /*
