@@ -7,28 +7,33 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import com.ejemplo.mobyhook.adapter.ViewBindingAdapter
 import com.ejemplo.mobyhook.databinding.FragmentMenuRvBinding
 
 class RecyclerViewMenuFragment : Fragment() {
     private var _binding: FragmentMenuRvBinding? = null
     private val binding get() = _binding!!
+    private lateinit var adapterViewBinding: ViewBindingAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentMenuRvBinding.inflate(layoutInflater, container, false)
+        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(requireContext())
+        binding.recycleView.layoutManager = layoutManager
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        /*super.onViewCreated(view, savedInstanceState)
         val albumList = Constants.getAlbumData()
         val itemAdapter = Adapter(albumList)
 
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerViewMenuFragment)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = itemAdapter
+        recyclerView.adapter = itemAdapter*/
     }
 
 

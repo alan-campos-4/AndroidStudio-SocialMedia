@@ -4,27 +4,30 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ejemplo.mobyhook.Album
+import com.ejemplo.mobyhook.databinding.ItemAlbumBinding
 
-class ViewBindingAdapter(var albumList: List<Album>) :
+class ViewBindingAdapter(private var albumList: List<Album>) :
     RecyclerView.Adapter<ViewBindingAdapter.BindingViewHolder>() {
 
-    inner class BindingViewHolder(private val bindingAdapter: LayoutViewBindingAdapterBinding):
+    inner class BindingViewHolder(private val bindingAdapter: ItemAlbumBinding):
         RecyclerView.ViewHolder(bindingAdapter.root) {
             fun bind(album: Album){
-
+                bindingAdapter.tvAlbumName.setText(album.name)
+                bindingAdapter.tvAlbumArtist.setText(album.artist)
+                bindingAdapter.tvAlbumYear.setText(album.year)
             }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BindingViewHolder {
-        val binding = LayoutViewBindingAdapterBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemAlbumBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return BindingViewHolder(binding)
     }
 
     override fun getItemCount(): Int = albumList.size
 
     override fun onBindViewHolder(holder: BindingViewHolder, position: Int) {
-        val album_item = albumList[position]
-        holder.bind(album_item)
+        val albumItem = albumList[position]
+        holder.bind(albumItem)
     }
 }
 
