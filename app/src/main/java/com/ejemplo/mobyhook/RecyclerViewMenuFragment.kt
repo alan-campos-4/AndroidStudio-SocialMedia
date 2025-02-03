@@ -12,17 +12,23 @@ import com.ejemplo.mobyhook.adapter.ViewBindingAdapter
 import com.ejemplo.mobyhook.databinding.FragmentMenuRvBinding
 
 class RecyclerViewMenuFragment : Fragment() {
-    private var _binding: FragmentMenuRvBinding? = null
+    private var _binding : FragmentMenuRvBinding? = null
     private val binding get() = _binding!!
+
     private lateinit var adapterViewBinding: ViewBindingAdapter
+    private lateinit var albumList: List<Album>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentMenuRvBinding.inflate(layoutInflater, container, false)
-        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(requireContext())
-        binding.recycleView.layoutManager = layoutManager
+        albumList = Constants.getAlbumData()
+        val layoutManager: LayoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerView.layoutManager = layoutManager
+        adapterViewBinding = ViewBindingAdapter(albumList)
+        binding.recyclerView.adapter = adapterViewBinding
+
         return binding.root
     }
 
