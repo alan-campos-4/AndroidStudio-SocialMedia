@@ -32,10 +32,10 @@ class Tab2Fragment : Fragment() {
         }
     }
     private fun replaceFragment(fragment: Fragment) {
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.recyclerViewMenuFragment, fragment)
-        fragmentTransaction.commit()
+        //val fragmentManager = supportFragmentManager
+        //val fragmentTransaction = fragmentManager.beginTransaction()
+        //fragmentTransaction.replace(R.id.recyclerViewMenuFragment, fragment)
+        //fragmentTransaction.commit()
     }
 
 /*

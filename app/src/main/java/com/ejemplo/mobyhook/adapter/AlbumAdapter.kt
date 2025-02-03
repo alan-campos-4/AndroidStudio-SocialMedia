@@ -1,13 +1,35 @@
-package com.ejemplo.mobyhook
+package com.ejemplo.mobyhook.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.ejemplo.mobyhook.Album
 
-class Adapter (private val albumList: ArrayList<Album>):
-    RecyclerView.Adapter<Adapter.MyViewHolder>() {
+class ViewBindingAdapter(var albumList: List<Album>) :
+    RecyclerView.Adapter<ViewBindingAdapter.BindingViewHolder>() {
+
+    inner class BindingViewHolder(private val bindingAdapter: LayoutViewBindingAdapterBinding):
+        RecyclerView.ViewHolder(bindingAdapter.root) {
+            fun bind(album: Album){
+
+            }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BindingViewHolder {
+        val binding = LayoutViewBindingAdapterBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return BindingViewHolder(binding)
+    }
+
+    override fun getItemCount(): Int = albumList.size
+
+    override fun onBindViewHolder(holder: BindingViewHolder, position: Int) {
+        val album_item = albumList[position]
+        holder.bind(album_item)
+    }
+}
+
+/*
+RecyclerView.Adapter<Adapter.MyViewHolder>() {
 
     // This method creates a new ViewHolder object for each item in the RecyclerView
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -33,7 +55,8 @@ class Adapter (private val albumList: ArrayList<Album>):
         val artist: TextView = itemView.findViewById(R.id.tvAlbumArtist)
         val year: TextView = itemView.findViewById(R.id.tvAlbumYear)
     }
-}
+*/
+
 
 /*
 class AlbumAdapter (
