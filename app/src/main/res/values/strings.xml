@@ -27,8 +27,8 @@
     <string name="album_desc">Album Image</string>
     <string name="menu_title">Welcome to the Menu</string>
 
-    <string name="menu_part_1">Home</string>
-    <string name="menu_part_2">Favorites</string>
+    <string name="menu_part_1">Favorites</string>
+    <string name="menu_part_2">Album List</string>
     <string name="menu_part_3">Settings</string>
 
     <string name="item_list">This is the item list</string>

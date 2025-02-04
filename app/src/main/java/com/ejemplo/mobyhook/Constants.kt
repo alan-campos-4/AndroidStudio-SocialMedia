@@ -8,7 +8,7 @@ object Constants {
             "Queen",
             1977,
             11,
-            "Hard rock, arena rock",
+            "Hard Rock, Arena Rock",
             "EMI Records",
             "https://upload.wikimedia.org/wikipedia/en/e/ea/Queen_News_Of_The_World.png"
         ))
@@ -31,11 +31,20 @@ object Constants {
             "https://en.wikipedia.org/wiki/Vali%C3%B3_la_Pena#/media/File:Marc_Anthony_-_Vali%C3%B3_la_Pena.png",
         ))
         albumsList.add(Album(
+            "Marvin's Marvelous Mechanical Museum",
+            "Tally Hall",
+            2005,
+            17,
+            "Alternative Rock, Garage Rock",
+            "Quack! Media",
+            "https://upload.wikimedia.org/wikipedia/en/a/a0/Tally_Hall_Marvin%27s_Marvelous_Mechanical_Museum_2005.png"
+        ))
+        albumsList.add(Album(
             "Inmortalized",
             "Disturbed",
             2015,
             16,
-            "Heavy metal, Alternative Metal",
+            "Heavy Metal, Alternative Metal",
             "Reprise Records",
             "https://upload.wikimedia.org/wikipedia/en/0/0b/Disturbed_immortalized_cover.jpg",
         ))
@@ -53,7 +62,7 @@ object Constants {
             "Judas Priest",
             2024,
             14,
-            "Heavy metal",
+            "Heavy Metal",
             "Columbia Records",
             "https://upload.wikimedia.org/wikipedia/en/e/e5/Judas_Priest_-_Invincible_Shield.png",
         ))
