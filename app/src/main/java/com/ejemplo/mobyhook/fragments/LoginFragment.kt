@@ -1,6 +1,5 @@
-package com.ejemplo.mobyhook
+package com.ejemplo.mobyhook.fragments
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.ejemplo.mobyhook.R
 import com.ejemplo.mobyhook.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_list_fav_navigation"
+    app:startDestination="@id/favItemListFragment">
+
+    <fragment
+        android:id="@+id/favItemListFragment"
+        android:name="com.ejemplo.mobyhook.fragments.menu.FavItemListFragment"
+        android:label="fragment_item_list_fav"
+        tools:layout="@layout/fragment_item_list_fav" />
+</navigation>

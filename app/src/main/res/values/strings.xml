@@ -25,4 +25,16 @@
     <string name="album_placeholder_2">...</string>
     <string name="album_placeholder_3">____</string>
     <string name="album_desc">Album Image</string>
+    <string name="menu_title">Welcome to the Menu</string>
+
+    <string name="menu_part_1">Home</string>
+    <string name="menu_part_2">Favorites</string>
+    <string name="menu_part_3">Settings</string>
+
+    <string name="item_list">This is the item list</string>
+    <string name="item_detail">This is the detailed item list</string>
+    <string name="item_list_fav">This is the favorite item list</string>
+    <string name="item_detail_fav">This is the favorite detailed item list</string>
+
+
 </resources>

@@ -3,29 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragmentCredit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.CreditFragment">
+    tools:context=".fragments.menu.FavItemListFragment">
 
     <TextView
-        android:id="@+id/tvMessage"
-        android:text="@string/Credit"
+        android:id="@+id/tvItemFavList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/item_list_fav"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnContact"
-        />
-
-    <Button
-        android:id="@+id/btnContact"
-        android:text="@string/btnContact"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMessage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />

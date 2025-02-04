@@ -1,4 +1,4 @@
-package com.ejemplo.mobyhook
+package com.ejemplo.mobyhook.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.ejemplo.mobyhook.R
+import com.ejemplo.mobyhook.Tab1Fragment
+import com.ejemplo.mobyhook.Tab2Fragment
 import com.ejemplo.mobyhook.databinding.FragmentTabsVpBinding
 import com.google.android.material.tabs.TabLayoutMediator
 

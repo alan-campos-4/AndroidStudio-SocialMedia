@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.ejemplo.mobyhook.LoginFragment"
+        android:name="com.ejemplo.mobyhook.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -18,22 +18,17 @@
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="com.ejemplo.mobyhook.ViewPagerFragment"
+        android:name="com.ejemplo.mobyhook.fragments.ViewPagerFragment"
         android:label="fragment_tabs_vp"
         tools:layout="@layout/fragment_tabs_vp"
-        />
-    <fragment
-        android:id="@+id/tab2Fragment"
-        android:name="com.ejemplo.mobyhook.Tab2Fragment"
-        android:label="fragment_tab2"
-        tools:layout="@layout/fragment_tab2" >
+        >
         <action
-            android:id="@+id/action_tab2Fragment_to_recyclerViewMenuFragment"
-            app:destination="@id/recyclerViewMenuFragment" />
+            android:id="@+id/action_viewPagerFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
-        android:id="@+id/recyclerViewMenuFragment"
-        android:name="com.ejemplo.mobyhook.RecyclerViewMenuFragment"
-        android:label="fragment_menu_rv"
-        tools:layout="@layout/fragment_menu_rv" />
+        android:id="@+id/menuFragment"
+        android:name="com.ejemplo.mobyhook.fragments.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
 </navigation>
