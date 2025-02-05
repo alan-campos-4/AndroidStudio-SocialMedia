@@ -1,6 +1,7 @@
 package com.ejemplo.mobyhook
 
 data class Album (
+    val id:Int,
     val name:String,
     val artist:String,
     val year:Int,
@@ -8,4 +9,12 @@ data class Album (
     val genres:String,
     val label:String,
     val picture:String,
-):java.io.Serializable
+    var favorite:Boolean):java.io.Serializable
+{
+    fun changeFavorite() {
+        if (favorite)
+            favorite = false
+        else
+            favorite = true
+    }
+}

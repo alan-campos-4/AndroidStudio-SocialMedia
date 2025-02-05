@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.ejemplo.mobyhook.R
 import com.ejemplo.mobyhook.databinding.FragmentMenuBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -21,8 +22,9 @@ class MenuFragment : Fragment() {
     ): View? {
         _binding = FragmentMenuBinding.inflate(inflater, container, false)
 
-        //val navHostFragment = binding.fragmentContainer as NavHostFragment
-        //val navController = navHostFragment.navController
+        val navFragment = childFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
+        val navController = navFragment.navController
+        binding.bottomNav.setupWithNavController(navController)
 
         return binding.root
     }

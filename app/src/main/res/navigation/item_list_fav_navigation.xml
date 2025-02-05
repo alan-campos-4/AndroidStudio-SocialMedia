@@ -9,5 +9,18 @@
         android:id="@+id/favItemListFragment"
         android:name="com.ejemplo.mobyhook.fragments.menu.FavItemListFragment"
         android:label="fragment_item_list_fav"
-        tools:layout="@layout/fragment_item_list_fav" />
+        tools:layout="@layout/fragment_item_list_fav" >
+        <action
+            android:id="@+id/action_favItemListFragment_to_detailFavItemFragment"
+            app:destination="@id/detailFavItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFavItemFragment"
+        android:name="com.ejemplo.mobyhook.fragments.menu.DetailFavItemFragment"
+        android:label="fragment_item_detail_fav"
+        tools:layout="@layout/fragment_item_detail_fav" >
+        <argument
+            android:name="idAlbum"
+            app:argType="integer" />
+    </fragment>
 </navigation>

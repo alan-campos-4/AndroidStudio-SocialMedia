@@ -5,16 +5,40 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.ejemplo.mobyhook.Album
+import com.ejemplo.mobyhook.Constants
 import com.ejemplo.mobyhook.R
+import com.ejemplo.mobyhook.adapters.AlbumAdapter
+import com.ejemplo.mobyhook.databinding.FragmentItemListBinding
 
 class ItemListFragment : Fragment() {
+    private var _binding : FragmentItemListBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_item_list, container, false)
+        _binding = FragmentItemListBinding.inflate(inflater, container, false)
+        initRecyclerView()
+        return binding.root
+    }
+
+    private fun initRecyclerView(){
+        val manager = LinearLayoutManager(binding.rvItemList.context)
+        binding.rvItemList.layoutManager = manager
+        binding.rvItemList.adapter = AlbumAdapter(
+            Constants.getAll()) { album -> onItemSelected(album)  }
+    }
+
+    private fun onItemSelected(album: Album){
+        Toast.makeText(
+            context,
+            album.name,
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
 }

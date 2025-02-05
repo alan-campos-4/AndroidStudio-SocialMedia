@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -42,8 +43,18 @@ dependencies {
     implementation(libs.glide)
     //implementation("androidx.fragment:fragment:1.5.4")
     implementation(libs.androidx.fragment)
-    //implementation "androidx.recyclerview:recyclerview:1.1.0"
+    //implementation("androidx.recyclerview:recyclerview:1.1.0")
     implementation(libs.androidx.recyclerview)
+    //implementation("androidx.recyclerview:recyclerview:1.1.0")
+
+    //val nav_version = "2.8.6"
+    //implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    //implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    //implementation("androidx.navigation:navigation-testing:$nav_version")
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.navigation.testing)
+
 
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.core.ktx)

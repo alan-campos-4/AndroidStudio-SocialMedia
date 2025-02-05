@@ -9,5 +9,18 @@
         android:id="@+id/itemListFragment"
         android:name="com.ejemplo.mobyhook.fragments.menu.ItemListFragment"
         android:label="fragment_item_list"
-        tools:layout="@layout/fragment_item_list" />
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_itemListFragment_to_detailItemFragment"
+            app:destination="@id/detailItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailItemFragment"
+        android:name="com.ejemplo.mobyhook.fragments.menu.DetailItemFragment"
+        android:label="fragment_item_detail"
+        tools:layout="@layout/fragment_item_detail" >
+        <argument
+            android:name="idAlbum"
+            app:argType="integer" />
+    </fragment>
 </navigation>
