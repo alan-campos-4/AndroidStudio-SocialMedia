@@ -11,6 +11,7 @@
         android:id="@+id/header_image"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:contentDescription="Album Cover"
         android:src="@drawable/kotlin_logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tvShowName"

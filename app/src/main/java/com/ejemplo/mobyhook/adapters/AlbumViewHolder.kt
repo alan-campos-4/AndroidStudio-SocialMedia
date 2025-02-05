@@ -9,18 +9,24 @@ import com.ejemplo.mobyhook.R
 import com.ejemplo.mobyhook.databinding.ItemAlbumBinding
 
 class AlbumViewHolder(view: View): RecyclerView.ViewHolder(view) {
-    val binding = ItemAlbumBinding.bind(view)
+    private val binding = ItemAlbumBinding.bind(view)
 
     fun render(albumModel: Album, onClickListener: (Album) -> Unit) {
         binding.tvAlbumName.text = albumModel.name
         binding.tvAlbumArtist.text = albumModel.artist
         albumModel.year.toString().also { binding.tvAlbumYear.text = it }
+        if (albumModel.favorite)
+            binding.btnFavorite.setColorFilter(R.color.black)
+        else
+            binding.btnFavorite.setColorFilter(R.color.red)
         Glide.with(binding.ivAlbum.context).load(albumModel.picture).into(binding.ivAlbum)
 
-        renderFavoriteIcon(albumModel)
         binding.btnFavorite.setOnClickListener {
-            albumModel.changeFavorite();
-            renderFavoriteIcon(albumModel)
+            albumModel.changeFavorite(itemView.context)
+            if (albumModel.favorite)
+                binding.btnFavorite.setColorFilter(R.color.red)
+            else
+                binding.btnFavorite.setColorFilter(R.color.black)
         }
 
         itemView.setOnClickListener {
@@ -28,10 +34,10 @@ class AlbumViewHolder(view: View): RecyclerView.ViewHolder(view) {
         }
     }
 
-    fun renderFavoriteIcon(album: Album) {
+    private fun renderFavoriteIcon(album: Album) {
         if (album.favorite)
-            binding.btnFavorite.setColorFilter(ContextCompat.getColor(itemView.context, R.color.red))
-        else
             binding.btnFavorite.setColorFilter(ContextCompat.getColor(itemView.context, R.color.black))
+        else
+            binding.btnFavorite.setColorFilter(ContextCompat.getColor(itemView.context, R.color.red))
     }
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ejemplo.mobyhook.Album
 import com.ejemplo.mobyhook.Constants
@@ -26,19 +27,16 @@ class ItemListFragment : Fragment() {
         return binding.root
     }
 
-    private fun initRecyclerView(){
+    private fun initRecyclerView() {
         val manager = LinearLayoutManager(binding.rvItemList.context)
         binding.rvItemList.layoutManager = manager
         binding.rvItemList.adapter = AlbumAdapter(
             Constants.getAll()) { album -> onItemSelected(album)  }
     }
 
-    private fun onItemSelected(album: Album){
-        Toast.makeText(
-            context,
-            album.name,
-            Toast.LENGTH_SHORT
-        ).show()
+    private fun onItemSelected(album: Album) {
+        val request = ItemListFragmentDirections.actionItemListFragmentToDetailItemFragment(idAlbum = album.id)
+        findNavController().navigate(request)
     }
 
 }

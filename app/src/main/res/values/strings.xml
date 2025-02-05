@@ -1,40 +1,39 @@
 <resources>
+
     <string name="app_name">Moby Hook</string>
     <string name="welcome">Welcome to Moby Hook</string>
     <string name="hint">Introduce tu nombre</string>
     <string name="btnLogin">Log in</string>
-    <string name="btnContact">Contactar</string>
-    <string name="Credit">"%s, estás usando la versión 1 de %s"</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-    <string name="hello_view_pager">This is the tab selection</string>
-    <string name="tab1_message">This is tab 1.</string>
-    <string name="tab2_message">This is tab 2.</string>
-    <string name="menu_message">This is the menu.</string>
-    <string name="credit_message">These are the credits.</string>
+    <string name="tab1_message">
+        This app lets you interact with a selection of albums;
+        viewing them, rating them investing them, among others.\n\n
+        Swipe to the left to start.
+    </string>
+    <string name="user_message">Hello %s, you are using version 1 of %s.</string>
     <string name="tab1_name">T1</string>
     <string name="tab2_name">T2</string>
     <string name="tabs_vp_message">Select the tab</string>
     <string name="btnMenu">Open menu</string>
 
-    <string name="album_tag_1">Name: </string>
-    <string name="album_tag_2">Artist: </string>
-    <string name="album_tag_3">Year: </string>
-    <string name="album_placeholder_1">---</string>
-    <string name="album_placeholder_2">...</string>
-    <string name="album_placeholder_3">____</string>
-    <string name="album_desc">Album Image</string>
-    <string name="menu_title">Welcome to the Menu</string>
-
     <string name="menu_part_1">Favorites</string>
     <string name="menu_part_2">Album List</string>
     <string name="menu_part_3">Settings</string>
 
-    <string name="item_list">This is the item list</string>
-    <string name="item_detail">This is the detailed item list</string>
-    <string name="item_list_fav">This is the favorite item list</string>
-    <string name="item_detail_fav">This is the favorite detailed item list</string>
+    <string name="go_back">Go Back</string>
+    <string name="display_label">Label: %s</string>
+    <string name="display_track">Track count: %s</string>
+    <string name="display_genre">Genre(s): %s</string>
+    <string name="name">Name</string>
+    <string name="artists">Artists</string>
+    <string name="year">Year</string>
+    <string name="album_cover">Album Cover</string>
+    <string name="menu_title">Volver atrás</string>
+    <string name="hello_view_pager">Select the tab</string>
+    <string name="album_desc">Album Cover</string>
+    <string name="album_placeholder">...</string>
+    <string name="Credit">Contactar</string>
+    <string name="btnContact">Contactar</string>
 
 
 </resources>

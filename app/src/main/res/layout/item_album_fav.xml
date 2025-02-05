@@ -22,6 +22,7 @@
 
     <TextView
         android:id="@+id/tvAlbumName"
+        android:text="@string/album_placeholder"
         android:textSize="16sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -31,11 +32,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/tvAlbumArtist"
-        tools:text="@string/album_placeholder_1"
         />
 
     <TextView
         android:id="@+id/tvAlbumArtist"
+        android:text="@string/album_placeholder"
         android:textSize="12sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -45,12 +46,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAlbumName"
         app:layout_constraintBottom_toTopOf="@+id/tvAlbumYear"
-
-        tools:text="@string/album_placeholder_2"
         />
 
     <TextView
         android:id="@+id/tvAlbumYear"
+        android:text="@string/album_placeholder"
         android:textSize="12sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -61,7 +61,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvAlbumArtist"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:text="@string/album_placeholder_3"
         />
 
 

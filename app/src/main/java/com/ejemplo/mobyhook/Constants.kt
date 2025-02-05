@@ -1,6 +1,7 @@
 package com.ejemplo.mobyhook
 
 object Constants {
+    private var favAlbumsList = ArrayList<Album>()
     private val albumsList = listOf<Album>(
         Album(
             1,
@@ -20,8 +21,8 @@ object Constants {
             1978,
             10,
             "Eurodisco, Reggae, Funk",
-            "Atlantic Records", //needs new link
-            "https://en.wikipedia.org/wiki/Nightflight_to_Venus#/media/File:Boney_M._-_Nightflight_To_Venus.jpg",
+            "Atlantic Records",
+            "https://upload.wikimedia.org/wikipedia/en/8/86/Boney_M._-_Nightflight_To_Venus.jpg",
             false
         ),
         Album(
@@ -31,8 +32,8 @@ object Constants {
             2004,
             8,
             "Salsa, Tropical",
-            "Sony US Latin", //needs new link
-            "https://en.wikipedia.org/wiki/Vali%C3%B3_la_Pena#/media/File:Marc_Anthony_-_Vali%C3%B3_la_Pena.png",
+            "Sony US Latin",
+            "https://upload.wikimedia.org/wikipedia/en/6/6c/Marc_Anthony_-_Vali%C3%B3_la_Pena.png",
             false
         ),
         Album(
@@ -65,7 +66,7 @@ object Constants {
             10,
             "R&B, Soul, Funk, Pop",
             "Aftermath Entertainment", //needs new link
-            "https://en.wikipedia.org/wiki/An_Evening_with_Silk_Sonic#/media/File:Silk_Sonic_-_An_Evening_with_Silk_Sonic.png",
+            "https://upload.wikimedia.org/wikipedia/en/8/8e/Silk_Sonic_-_An_Evening_with_Silk_Sonic.png.png",
             true
         ),
         Album(
@@ -81,21 +82,15 @@ object Constants {
         )
     )
 
-    fun changeFavorite(album: Album) {
-        if (album.favorite)
-            album.favorite = false
-        else
-            album.favorite = true
-    }
-
     fun getAll():List<Album> { return albumsList }
 
-    fun getFavorites():List<Album> {
-        val favAlbumsList = ArrayList<Album>()
-        for (album in getAll()) {
-            if (album.favorite)
-                favAlbumsList.add(album)
-        }
-        return favAlbumsList
+    fun getFavorites():List<Album> { return favAlbumsList }
+
+    fun addFavorite(album: Album):Boolean {
+        return favAlbumsList.remove(album)
     }
+    fun removeFavorite(album: Album):Boolean {
+        return favAlbumsList.add(album)
+    }
+
 }

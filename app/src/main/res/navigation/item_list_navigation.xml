@@ -22,5 +22,8 @@
         <argument
             android:name="idAlbum"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_detailItemFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
     </fragment>
 </navigation>

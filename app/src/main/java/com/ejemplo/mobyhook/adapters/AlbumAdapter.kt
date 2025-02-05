@@ -8,7 +8,7 @@ import com.ejemplo.mobyhook.R
 
 class AlbumAdapter(
     private val albumList:List<Album>,
-    private val onClickListener: (Album) -> Unit
+    private val onClickListener:(Album) -> Unit
 ) : RecyclerView.Adapter<AlbumViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlbumViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

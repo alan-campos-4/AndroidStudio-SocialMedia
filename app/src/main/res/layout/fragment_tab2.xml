@@ -7,23 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".Tab2Fragment">
 
-    <TextView
-        android:id="@+id/tvTab2"
-        android:text="@string/tab2_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/btnTab2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-
     <Button
         android:id="@+id/btnTab2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btnMenu"
-        app:layout_constraintTop_toBottomOf="@+id/tvTab2"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
