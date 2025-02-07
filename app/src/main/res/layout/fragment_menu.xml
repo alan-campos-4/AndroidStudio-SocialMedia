@@ -8,7 +8,7 @@
     tools:context=".fragments.MenuFragment">
 
     <Button
-        android:id="@+id/tvMenu"
+        android:id="@+id/btnMenuBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_title"
@@ -28,7 +28,7 @@
         android:layout_height="0dp"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph_menu"
-        app:layout_constraintTop_toBottomOf="@+id/tvMenu"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenuBack"
         app:layout_constraintBottom_toTopOf="@+id/bottomNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

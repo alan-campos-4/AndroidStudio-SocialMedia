@@ -10,7 +10,7 @@
         viewing them, rating them investing them, among others.\n\n
         Swipe to the left to start.
     </string>
-    <string name="user_message">Hello %s, you are using version 1 of %s.</string>
+    <string name="user_message">Hello %s, you are using version 1 of Moby Hook.</string>
     <string name="tab1_name">T1</string>
     <string name="tab2_name">T2</string>
     <string name="tabs_vp_message">Select the tab</string>
@@ -34,6 +34,6 @@
     <string name="album_placeholder">...</string>
     <string name="Credit">Contactar</string>
     <string name="btnContact">Contactar</string>
-
+    <string name="name_needed_message">Debes introducir un nombre.</string>
 
 </resources>

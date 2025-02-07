@@ -5,12 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ejemplo.mobyhook.Album
 import com.ejemplo.mobyhook.Constants
-import com.ejemplo.mobyhook.R
 import com.ejemplo.mobyhook.adapters.AlbumAdapter
 import com.ejemplo.mobyhook.databinding.FragmentItemListBinding
 
@@ -31,12 +29,11 @@ class ItemListFragment : Fragment() {
         val manager = LinearLayoutManager(binding.rvItemList.context)
         binding.rvItemList.layoutManager = manager
         binding.rvItemList.adapter = AlbumAdapter(
-            Constants.getAll()) { album -> onItemSelected(album)  }
+            Constants.getAll()) { album -> onItemSelected(album) }
     }
 
     private fun onItemSelected(album: Album) {
         val request = ItemListFragmentDirections.actionItemListFragmentToDetailItemFragment(idAlbum = album.id)
         findNavController().navigate(request)
     }
-
 }

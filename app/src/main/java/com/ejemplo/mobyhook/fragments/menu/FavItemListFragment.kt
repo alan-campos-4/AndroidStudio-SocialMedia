@@ -5,12 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ejemplo.mobyhook.Album
 import com.ejemplo.mobyhook.Constants
-import com.ejemplo.mobyhook.R
 import com.ejemplo.mobyhook.adapters.AlbumAdapter
-import com.ejemplo.mobyhook.adapters.FavAlbumAdapter
 import com.ejemplo.mobyhook.databinding.FragmentItemListFavBinding
 
 class FavItemListFragment : Fragment() {
@@ -34,6 +33,7 @@ class FavItemListFragment : Fragment() {
     }
 
     private fun onItemSelected(album: Album) {
-        //
+        val request = FavItemListFragmentDirections.actionFavItemListFragmentToDetailFavItemFragment(idAlbum = album.id)
+        findNavController().navigate(request)
     }
 }

@@ -12,7 +12,7 @@ object Constants {
             "Hard Rock, Arena Rock",
             "EMI Records",
             "https://upload.wikimedia.org/wikipedia/en/e/ea/Queen_News_Of_The_World.png",
-            true
+            false
         ),
         Album(
             2,
@@ -67,7 +67,7 @@ object Constants {
             "R&B, Soul, Funk, Pop",
             "Aftermath Entertainment", //needs new link
             "https://upload.wikimedia.org/wikipedia/en/8/8e/Silk_Sonic_-_An_Evening_with_Silk_Sonic.png.png",
-            true
+            false
         ),
         Album(
             7,
@@ -78,13 +78,20 @@ object Constants {
             "Heavy Metal",
             "Columbia Records",
             "https://upload.wikimedia.org/wikipedia/en/e/e5/Judas_Priest_-_Invincible_Shield.png",
-            true
+            false
         )
     )
 
     fun getAll():List<Album> { return albumsList }
 
     fun getFavorites():List<Album> { return favAlbumsList }
+
+    fun initFavorites() {
+        for (album in albumsList) {
+            if (album.favorite)
+                favAlbumsList.add(album)
+        }
+    }
 
     fun addFavorite(album: Album):Boolean {
         return favAlbumsList.remove(album)

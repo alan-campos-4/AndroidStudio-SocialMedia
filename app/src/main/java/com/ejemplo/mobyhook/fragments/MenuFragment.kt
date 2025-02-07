@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.ejemplo.mobyhook.Constants
 import com.ejemplo.mobyhook.R
 import com.ejemplo.mobyhook.databinding.FragmentMenuBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -21,10 +23,13 @@ class MenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentMenuBinding.inflate(inflater, container, false)
-
         val navFragment = childFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
         val navController = navFragment.navController
         binding.bottomNav.setupWithNavController(navController)
+        binding.btnMenuBack.setOnClickListener{
+            findNavController().navigate(R.id.action_menuFragment_to_viewPagerFragment)
+        }
+        Constants.initFavorites()
 
         return binding.root
     }
