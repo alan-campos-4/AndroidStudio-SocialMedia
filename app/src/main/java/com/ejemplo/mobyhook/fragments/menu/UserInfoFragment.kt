@@ -1,14 +1,18 @@
 package com.ejemplo.mobyhook.fragments.menu
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.ejemplo.mobyhook.ItemViewModel
 import com.ejemplo.mobyhook.R
 import com.ejemplo.mobyhook.databinding.FragmentUserInfoBinding
+
 
 class UserInfoFragment : Fragment() {
     private var _binding : FragmentUserInfoBinding? = null
@@ -23,6 +27,9 @@ class UserInfoFragment : Fragment() {
 
         val username = viewModel.getItem()
         binding.tvUserInfo.text = getString(R.string.user_message, username)
+        binding.btnContact.setOnClickListener{
+            findNavController().navigate(R.id.action_userInfoFragment_to_creditFragment)
+        }
 
         return binding.root
     }

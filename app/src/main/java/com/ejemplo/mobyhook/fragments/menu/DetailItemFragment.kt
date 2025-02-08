@@ -28,7 +28,7 @@ class DetailItemFragment : Fragment() {
             Glide.with(binding.headerImage.context).load(album.picture).into(binding.headerImage)
             binding.tvShowName.text = album.name
             binding.tvShowArtist.text = album.artist
-            binding.tvShowYear.text = album.year.toString()
+            binding.tvShowYear.text = album.releaseDate.toString()
             binding.tvShowLabel.text = getString(R.string.display_label, album.label)
             binding.tvShowTracks.text = getString(R.string.display_track, album.numTracks.toString())
             binding.tvShowGenre.text = getString(R.string.display_genre, album.genres)

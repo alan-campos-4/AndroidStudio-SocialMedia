@@ -14,26 +14,37 @@
     <string name="tab1_name">T1</string>
     <string name="tab2_name">T2</string>
     <string name="tabs_vp_message">Select the tab</string>
+    <string name="hello_view_pager">Select the tab</string>
     <string name="btnMenu">Open menu</string>
+    <string name="name_needed_message">Debes introducir un nombre.</string>
+    <string name="album_added">% has been added to your favorites.</string>
+    <string name="album_removed">% is no longer in your favorites.</string>
 
     <string name="menu_part_1">Favorites</string>
     <string name="menu_part_2">Album List</string>
     <string name="menu_part_3">Settings</string>
 
     <string name="go_back">Go Back</string>
-    <string name="display_label">Label: %s</string>
-    <string name="display_track">Track count: %s</string>
-    <string name="display_genre">Genre(s): %s</string>
     <string name="name">Name</string>
     <string name="artists">Artists</string>
     <string name="year">Year</string>
-    <string name="album_cover">Album Cover</string>
+    <string name="display_label">Label: %s</string>
+    <string name="display_track">Track count: %s</string>
+    <string name="display_genre">Genre(s): %s</string>
+    <string name="display_members">Members: %s</string>
+    <string name="display_fav_date">Favorited on: %s</string>
+
+
     <string name="menu_title">Volver atrás</string>
-    <string name="hello_view_pager">Select the tab</string>
-    <string name="album_desc">Album Cover</string>
+    <string name="desc_album">Album Cover</string>
+    <string name="desc_btn_favorite">Set as Favorite</string>
     <string name="album_placeholder">...</string>
-    <string name="Credit">Contactar</string>
-    <string name="btnContact">Contactar</string>
-    <string name="name_needed_message">Debes introducir un nombre.</string>
+    <string name="btnContact">Contact us</string>
+    <string name="email_recipient">Send To:</string>
+    <string name="email_recipient_default">alvaroespi2003@gmail.com</string>
+    <string name="email_subject">Email Subject:</string>
+    <string name="email_subject_default">Moby Hook feedback</string>
+    <string name="email_body">Email Body:</string>
+    <string name="send_us_an_e_mail">Send us an e-mail with your thoughts!</string>
 
 </resources>

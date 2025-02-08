@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-02-07T12:31:15.152962800Z">
+        <DropdownSelection timestamp="2025-02-07T21:31:08.237284900Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\DAM-A\.android\avd\Medium_Phone_API_35.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\alvar\.android\avd\One_PLus_10T_5G_API_34.avd" />
             </handle>
           </Target>
         </DropdownSelection>

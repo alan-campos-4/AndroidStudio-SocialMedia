@@ -22,5 +22,8 @@
         <argument
             android:name="idAlbum"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_detailFavItemFragment_to_favItemListFragment"
+            app:destination="@id/favItemListFragment" />
     </fragment>
 </navigation>

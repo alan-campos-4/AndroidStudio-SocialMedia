@@ -5,14 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.ejemplo.mobyhook.Constants
 import com.ejemplo.mobyhook.R
 import com.ejemplo.mobyhook.databinding.FragmentMenuBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MenuFragment : Fragment() {
     private var _binding : FragmentMenuBinding? = null
@@ -29,7 +26,6 @@ class MenuFragment : Fragment() {
         binding.btnMenuBack.setOnClickListener{
             findNavController().navigate(R.id.action_menuFragment_to_viewPagerFragment)
         }
-        Constants.initFavorites()
 
         return binding.root
     }

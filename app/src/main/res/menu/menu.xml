@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@id/item_list_fav_navigation"
-        android:icon="@drawable/ic_heart_full"
+        android:icon="@drawable/ic_heart"
         android:title="@string/menu_part_1"
         />
     <item

@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ejemplo.mobyhook.Album
 import com.ejemplo.mobyhook.Constants
-import com.ejemplo.mobyhook.adapters.AlbumAdapter
+import com.ejemplo.mobyhook.adapters.FavAlbumAdapter
 import com.ejemplo.mobyhook.databinding.FragmentItemListFavBinding
 
 class FavItemListFragment : Fragment() {
@@ -28,7 +28,7 @@ class FavItemListFragment : Fragment() {
     private fun initRecyclerView() {
         val manager = LinearLayoutManager(binding.rvFavItemList.context)
         binding.rvFavItemList.layoutManager = manager
-        binding.rvFavItemList.adapter = AlbumAdapter(
+        binding.rvFavItemList.adapter = FavAlbumAdapter(
             Constants.getFavorites()) { album -> onItemSelected(album) }
     }
 

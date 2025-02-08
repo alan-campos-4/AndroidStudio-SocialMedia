@@ -1,5 +1,7 @@
 package com.ejemplo.mobyhook
 
+import java.time.LocalDate
+
 object Constants {
     private var favAlbumsList = ArrayList<Album>()
     private val albumsList = listOf<Album>(
@@ -7,78 +9,90 @@ object Constants {
             1,
             "News of the World",
             "Queen",
-            1977,
+            LocalDate.parse("1977-10-28"),
             11,
-            "Hard Rock, Arena Rock",
+            listOf("Hard Rock", "Arena Rock"),
             "EMI Records",
             "https://upload.wikimedia.org/wikipedia/en/e/ea/Queen_News_Of_The_World.png",
-            false
+            listOf("Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"),
+            false,
+            null
         ),
         Album(
             2,
             "Nightflight to Venus",
             "Boney M.",
-            1978,
+            LocalDate.parse("1978-06-23"),
             10,
-            "Eurodisco, Reggae, Funk",
+            listOf("Eurodisco", "Reggae", "Funk"),
             "Atlantic Records",
             "https://upload.wikimedia.org/wikipedia/en/8/86/Boney_M._-_Nightflight_To_Venus.jpg",
-            false
+            listOf("Liz Mitchell", "Marcia Barrett", "Maizie Williams", "Bobby Farrell"),
+            false, null
         ),
         Album(
             3,
             "Valió la Pena",
             "Marc Anthony",
-            2004,
+            LocalDate.parse("2004-07-27"),
             8,
-            "Salsa, Tropical",
+            listOf("Salsa", "Tropical"),
             "Sony US Latin",
             "https://upload.wikimedia.org/wikipedia/en/6/6c/Marc_Anthony_-_Vali%C3%B3_la_Pena.png",
-            false
+            listOf("Marc Anthony"),
+            false, null
         ),
         Album(
             4,
             "Marvin's Marvelous Mechanical Museum",
             "Tally Hall",
-            2005,
+            LocalDate.parse("2005-10-24"),
             17,
-            "Alternative Rock, Garage Rock",
+            listOf("Alternative Rock", "Garage Rock"),
             "Quack! Media",
             "https://upload.wikimedia.org/wikipedia/en/a/a0/Tally_Hall_Marvin%27s_Marvelous_Mechanical_Museum_2005.png",
-            false
+            listOf("Rob Cantor", "Joey Hawley", "Zubin Sedghi", "Andrew Horowitz", "Ross Federman"),
+            false,
+            null
         ),
         Album(
             5,
-            "Inmortalized",
+            "Immortalized",
             "Disturbed",
-            2015,
+            LocalDate.parse("2015-08-21"),
             16,
-            "Heavy Metal, Alternative Metal",
+            listOf("Heavy Metal", "Alternative Metal"),
             "Reprise Records",
             "https://upload.wikimedia.org/wikipedia/en/0/0b/Disturbed_immortalized_cover.jpg",
-            false
+            listOf("David Draiman", "Dan Donegan", "Mike Wengren", "John Moyer"),
+            false,
+            null
         ),
         Album(
             6,
             "An Evening with Silk Sonic",
             "Bruno Mars, Anderson .Paak",
-            2021,
+            LocalDate.parse("2021-11-12"),
             10,
-            "R&B, Soul, Funk, Pop",
+            listOf("R&B", "Soul", "Funk", "Pop"),
             "Aftermath Entertainment", //needs new link
-            "https://upload.wikimedia.org/wikipedia/en/8/8e/Silk_Sonic_-_An_Evening_with_Silk_Sonic.png.png",
-            false
+            "https://s3.amazonaws.com/media.thecrimson.com/photos/2021/12/30/211516_1353599.jpg",
+            listOf("Bruno Mars", "Anderson .Paak"),
+            false,
+            null,
         ),
         Album(
             7,
             "Invincible Shield",
             "Judas Priest",
-            2024,
+            LocalDate.parse("2024-03-06"),
             14,
-            "Heavy Metal",
+            listOf("Heavy Metal"),
             "Columbia Records",
             "https://upload.wikimedia.org/wikipedia/en/e/e5/Judas_Priest_-_Invincible_Shield.png",
-            false
+            listOf("Rob Halford", "Glen Tipton", "Richie Faulkner", "Ian Hill", "Scott Travis"),
+            false,
+            null
         )
     )
 
@@ -88,7 +102,7 @@ object Constants {
 
     fun initFavorites() {
         for (album in albumsList) {
-            if (album.favorite)
+            if (album.isFavorite())
                 favAlbumsList.add(album)
         }
     }

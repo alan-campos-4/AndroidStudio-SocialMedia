@@ -8,11 +8,11 @@
 
     <ImageView
         android:id="@+id/ivAlbum"
+        android:contentDescription="@string/desc_album"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginVertical="16dp"
         android:layout_marginHorizontal="16dp"
-        android:contentDescription="@string/album_desc"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,7 +22,8 @@
 
     <TextView
         android:id="@+id/tvAlbumName"
-        android:textSize="16sp"
+        android:text="@string/album_placeholder"
+        android:textSize="18sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -31,48 +32,48 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/tvAlbumArtist"
-        tools:text="@string/album_placeholder_1"
         />
 
     <TextView
         android:id="@+id/tvAlbumArtist"
-        android:textSize="12sp"
+        android:text="@string/album_placeholder"
+        android:textSize="14sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="7dp"
         app:layout_constraintStart_toEndOf="@+id/ivAlbum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAlbumName"
         app:layout_constraintBottom_toTopOf="@+id/tvAlbumYear"
-
-        tools:text="@string/album_placeholder_2"
         />
 
     <TextView
         android:id="@+id/tvAlbumYear"
-        android:textSize="12sp"
+        android:text="@string/album_placeholder"
+        android:textSize="14sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="7dp"
         app:layout_constraintStart_toEndOf="@+id/ivAlbum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvAlbumArtist"
         app:layout_constraintBottom_toTopOf="@id/btnFavorite"
-        tools:text="@string/album_placeholder_3"
         />
 
     <ImageButton
         android:id="@+id/btnFavorite"
+        android:contentDescription="@string/desc_btn_favorite"
         android:src="@drawable/ic_heart"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginVertical="5dp"
+        app:tint="@color/white"
         app:layout_constraintTop_toBottomOf="@id/tvAlbumYear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/white" />
+        />
+    <!--android:background="@drawable/favorite_selector"-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
