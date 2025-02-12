@@ -2,49 +2,49 @@
 
     <string name="app_name">Moby Hook</string>
     <string name="welcome">Welcome to Moby Hook</string>
-    <string name="hint">Introduce tu nombre</string>
+    <string name="hint">Introduce your name</string>
     <string name="btnLogin">Log in</string>
 
     <string name="tab1_message">
         This app lets you interact with a selection of albums;
-        viewing them, rating them investing them, among others.\n\n
+        viewing them, rating them, among others.\n\n
         Swipe to the left to start.
     </string>
     <string name="user_message">Hello %s, you are using version 1 of Moby Hook.</string>
     <string name="tab1_name">T1</string>
     <string name="tab2_name">T2</string>
     <string name="tabs_vp_message">Select the tab</string>
-    <string name="hello_view_pager">Select the tab</string>
     <string name="btnMenu">Open menu</string>
-    <string name="name_needed_message">Debes introducir un nombre.</string>
+    <string name="name_needed_message">You must enter a name.</string>
     <string name="album_added">% has been added to your favorites.</string>
     <string name="album_removed">% is no longer in your favorites.</string>
 
     <string name="menu_part_1">Favorites</string>
     <string name="menu_part_2">Album List</string>
     <string name="menu_part_3">Settings</string>
-
     <string name="go_back">Go Back</string>
-    <string name="name">Name</string>
-    <string name="artists">Artists</string>
-    <string name="year">Year</string>
+
     <string name="display_label">Label: %s</string>
     <string name="display_track">Track count: %s</string>
     <string name="display_genre">Genre(s): %s</string>
     <string name="display_members">Members: %s</string>
     <string name="display_fav_date">Favorited on: %s</string>
-
-
-    <string name="menu_title">Volver atrás</string>
     <string name="desc_album">Album Cover</string>
     <string name="desc_btn_favorite">Set as Favorite</string>
-    <string name="album_placeholder">...</string>
+
+    <string name="send_email_message">Send us an e-mail with your thoughts!</string>
+    <string name="send_email_button">Send email</string>
     <string name="btnContact">Contact us</string>
     <string name="email_recipient">Send To:</string>
-    <string name="email_recipient_default">alvaroespi2003@gmail.com</string>
     <string name="email_subject">Email Subject:</string>
-    <string name="email_subject_default">Moby Hook feedback</string>
     <string name="email_body">Email Body:</string>
-    <string name="send_us_an_e_mail">Send us an e-mail with your thoughts!</string>
+    <string name="email_recipient_default">alvaroespi2003@gmail.com</string>
+    <string name="email_subject_default">Moby Hook feedback</string>
+    <string name="go_back_menu">Go back\n to the menu</string>
+
+    <string name="name">Name</string>
+    <string name="artists">Artists</string>
+    <string name="year">Year</string>
+    <string name="album_placeholder">…</string>
 
 </resources>

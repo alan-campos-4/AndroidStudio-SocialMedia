@@ -9,7 +9,7 @@
     tools:context=".fragments.CreditFragment">
 
     <TextView
-        android:text="@string/send_us_an_e_mail"
+        android:text="@string/send_email_message"
         android:textSize="15sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,15 +97,26 @@
 
     <Button
         android:id="@+id/btnSendEmail"
-        android:text="Send email"
-        android:textSize="24sp"
+        android:text="@string/send_email_button"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="70dp"
         android:layout_marginBottom="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnEmailReturn"
+        />
+
+    <Button
+        android:id="@+id/btnEmailReturn"
+        android:text="@string/go_back_menu"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnSendEmail"
         app:layout_constraintEnd_toEndOf="parent"
-         />
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

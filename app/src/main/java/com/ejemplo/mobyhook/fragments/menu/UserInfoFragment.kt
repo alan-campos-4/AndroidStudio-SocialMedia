@@ -28,7 +28,7 @@ class UserInfoFragment : Fragment() {
         val username = viewModel.getItem()
         binding.tvUserInfo.text = getString(R.string.user_message, username)
         binding.btnContact.setOnClickListener{
-            findNavController().navigate(R.id.action_userInfoFragment_to_creditFragment)
+            findNavController().navigateUp()
         }
 
         return binding.root
