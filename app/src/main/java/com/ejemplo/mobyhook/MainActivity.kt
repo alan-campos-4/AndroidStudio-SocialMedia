@@ -5,9 +5,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.ejemplo.mobyhook.databinding.FragmentMenuBinding
+import androidx.navigation.ui.NavigationUI
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,5 +19,17 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //*incluye un controlador de navegacion. fragmentcontainerView2 es el host de navegación.
+        val navFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        val navController = navFragment.navController
+        //establece la barra con controles
+        NavigationUI.setupActionBarWithNavController(this, navController)//*/
     }
+
+    //*
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.fragmentContainerView)
+        return navController.navigateUp()
+    }//*/
 }
