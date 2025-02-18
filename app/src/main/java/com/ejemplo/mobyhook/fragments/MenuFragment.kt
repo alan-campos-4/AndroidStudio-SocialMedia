@@ -23,9 +23,9 @@ class MenuFragment : Fragment() {
         val navFragment = childFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
         val navController = navFragment.navController
         binding.bottomNav.setupWithNavController(navController)
-        binding.btnMenuBack.setOnClickListener{
+        /*binding.btnMenuBack.setOnClickListener{
             findNavController().navigate(R.id.action_menuFragment_to_viewPagerFragment)
-        }
+        }*/
 
         return binding.root
     }

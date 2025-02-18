@@ -29,7 +29,6 @@ class CreditFragment : Fragment() {
             i.putExtra(Intent.EXTRA_TEXT, binding.etEmailBody.text)
             startActivity(Intent.createChooser(i, "Send mail..."))
         }
-
         binding.btnEmailReturn.setOnClickListener{
             findNavController().navigateUp()
         }
