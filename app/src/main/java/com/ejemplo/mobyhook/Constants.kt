@@ -15,7 +15,7 @@ object Constants {
             "EMI Records",
             "https://upload.wikimedia.org/wikipedia/en/e/ea/Queen_News_Of_The_World.png",
             listOf("Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"),
-            false,
+            true,
             null
         ),
         Album(
@@ -54,7 +54,7 @@ object Constants {
             "Quack! Media",
             "https://upload.wikimedia.org/wikipedia/en/a/a0/Tally_Hall_Marvin%27s_Marvelous_Mechanical_Museum_2005.png",
             listOf("Rob Cantor", "Joey Hawley", "Zubin Sedghi", "Andrew Horowitz", "Ross Federman"),
-            false,
+            true,
             null
         ),
         Album(
@@ -67,7 +67,7 @@ object Constants {
             "Reprise Records",
             "https://upload.wikimedia.org/wikipedia/en/0/0b/Disturbed_immortalized_cover.jpg",
             listOf("David Draiman", "Dan Donegan", "Mike Wengren", "John Moyer"),
-            false,
+            true,
             null
         ),
         Album(
@@ -102,11 +102,12 @@ object Constants {
 
     fun getFavorites():List<Album> { return favAlbumsList }
 
-    fun initFavorites() {
+    fun initFavorites():List<Album> {
         for (album in albumsList) {
-            if (album.isFavorite())
+            if (album.favorite)
                 favAlbumsList.add(album)
         }
+        return albumsList
     }
 
     fun addFavorite(album: Album):Boolean {
