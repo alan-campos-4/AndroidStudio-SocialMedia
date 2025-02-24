@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.ejemplo.mobyhook.R
 import com.ejemplo.mobyhook.databinding.FragmentCreditBinding
 
@@ -27,6 +28,9 @@ class CreditFragment : Fragment() {
             i.putExtra(Intent.EXTRA_SUBJECT, binding.etEmailSubject.text)
             i.putExtra(Intent.EXTRA_TEXT, binding.etEmailBody.text)
             startActivity(Intent.createChooser(i, "Send mail..."))
+        }
+        binding.btnEmailReturn.setOnClickListener{
+            findNavController().navigateUp()
         }
 
         return binding.root

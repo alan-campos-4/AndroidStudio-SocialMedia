@@ -1,7 +1,5 @@
 package com.ejemplo.mobyhook.fragments.menu
 
-import android.content.ActivityNotFoundException
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import com.ejemplo.mobyhook.ItemViewModel
 import com.ejemplo.mobyhook.R
 import com.ejemplo.mobyhook.databinding.FragmentUserInfoBinding
-
 
 class UserInfoFragment : Fragment() {
     private var _binding : FragmentUserInfoBinding? = null

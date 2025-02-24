@@ -1,0 +1,50 @@
+<resources>
+
+    <string name="app_name">Moby Hook</string>
+    <string name="welcome">Bienvendio a Moby Hook</string>
+    <string name="hint">Introduce tu nombre</string>
+    <string name="btnLogin">Entrar</string>
+
+    <string name="tab1_message">
+        Esta app te permite interactuar con una selección de álbumes;
+        viéndolos, puntuándolos, entre otros.\n\n
+        Desliza a la izquierda para empezar.
+    </string>
+    <string name="user_message">Hola %s, estás usando la versión 1 de Moby Hook.</string>
+    <string name="tab1_name">T1</string>
+    <string name="tab2_name">T2</string>
+    <string name="tabs_vp_message">Selecciona la pestaña</string>
+    <string name="btnMenu">Abrir menú</string>
+    <string name="name_needed_message">Debes introducir un nombre.</string>
+    <string name="album_added">% ha sido añadido a tus favoritos.</string>
+    <string name="album_removed">% ya no está en tus favorites.</string>
+
+    <string name="menu_part_1">Favoritos</string>
+    <string name="menu_part_2">Lista de álbumes</string>
+    <string name="menu_part_3">Ajustes</string>
+    <string name="go_back">Volver atrás</string>
+
+    <string name="display_label">Discográfica: %s</string>
+    <string name="display_track">Nº de pistas: %s</string>
+    <string name="display_genre">Género(s): %s</string>
+    <string name="display_members">Miembros: %s</string>
+    <string name="display_fav_date">Favoritado el: %s</string>
+    <string name="desc_album">Portada del álbum</string>
+    <string name="desc_btn_favorite">Marcar como Favorito</string>
+
+    <string name="send_email_message">Envíanos un e-mail con tus opininones!</string>
+    <string name="send_email_button">Enviar email</string>
+    <string name="btnContact">Contacta con nostros</string>
+    <string name="email_recipient">Enviar a:</string>
+    <string name="email_subject">Asunto del email:</string>
+    <string name="email_body">Cuerpo del email:</string>
+    <string name="email_recipient_default">alvaroespi2003@gmail.com</string>
+    <string name="email_subject_default">Moby Hook feedback</string>
+    <string name="go_back_menu">Volver\nal menú</string>
+
+    <string name="name">Name</string>
+    <string name="artists">Artists</string>
+    <string name="year">Year</string>
+    <string name="album_placeholder">…</string>
+
+</resources>

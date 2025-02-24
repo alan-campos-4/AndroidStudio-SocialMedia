@@ -1,5 +1,6 @@
 package com.ejemplo.mobyhook.adapters
 
+import android.content.res.Resources
 import android.graphics.Color
 import android.view.View
 import android.widget.Toast
@@ -19,9 +20,9 @@ class AlbumViewHolder(view: View): RecyclerView.ViewHolder(view) {
         binding.tvAlbumYear.text = albumModel.releaseDate.toString().split("-")[0]
 
         if (albumModel.isFavorite())
-            binding.btnFavorite.drawable.setTint(Color.BLACK)
-        else
             binding.btnFavorite.drawable.setTint(Color.RED)
+        else
+            binding.btnFavorite.drawable.setTint(Color.BLACK)
 
         binding.btnFavorite.setOnClickListener {
             if (albumModel.changeFavorite()) {

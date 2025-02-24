@@ -15,7 +15,7 @@ object Constants {
             "EMI Records",
             "https://upload.wikimedia.org/wikipedia/en/e/ea/Queen_News_Of_The_World.png",
             listOf("Freddie Mercury", "Brian May", "Roger Taylor", "John Deacon"),
-            false,
+            true,
             null
         ),
         Album(
@@ -28,7 +28,8 @@ object Constants {
             "Atlantic Records",
             "https://upload.wikimedia.org/wikipedia/en/8/86/Boney_M._-_Nightflight_To_Venus.jpg",
             listOf("Liz Mitchell", "Marcia Barrett", "Maizie Williams", "Bobby Farrell"),
-            false, null
+            false,
+            null
         ),
         Album(
             3,
@@ -40,7 +41,8 @@ object Constants {
             "Sony US Latin",
             "https://upload.wikimedia.org/wikipedia/en/6/6c/Marc_Anthony_-_Vali%C3%B3_la_Pena.png",
             listOf("Marc Anthony"),
-            false, null
+            false,
+            null
         ),
         Album(
             4,
@@ -52,7 +54,7 @@ object Constants {
             "Quack! Media",
             "https://upload.wikimedia.org/wikipedia/en/a/a0/Tally_Hall_Marvin%27s_Marvelous_Mechanical_Museum_2005.png",
             listOf("Rob Cantor", "Joey Hawley", "Zubin Sedghi", "Andrew Horowitz", "Ross Federman"),
-            false,
+            true,
             null
         ),
         Album(
@@ -65,7 +67,7 @@ object Constants {
             "Reprise Records",
             "https://upload.wikimedia.org/wikipedia/en/0/0b/Disturbed_immortalized_cover.jpg",
             listOf("David Draiman", "Dan Donegan", "Mike Wengren", "John Moyer"),
-            false,
+            true,
             null
         ),
         Album(
@@ -75,11 +77,11 @@ object Constants {
             LocalDate.parse("2021-11-12"),
             10,
             listOf("R&B", "Soul", "Funk", "Pop"),
-            "Aftermath Entertainment", //needs new link
+            "Aftermath Entertainment",
             "https://s3.amazonaws.com/media.thecrimson.com/photos/2021/12/30/211516_1353599.jpg",
             listOf("Bruno Mars", "Anderson .Paak"),
             false,
-            null,
+            null
         ),
         Album(
             7,
@@ -100,11 +102,12 @@ object Constants {
 
     fun getFavorites():List<Album> { return favAlbumsList }
 
-    fun initFavorites() {
+    fun initFavorites():List<Album> {
         for (album in albumsList) {
-            if (album.isFavorite())
+            if (album.favorite)
                 favAlbumsList.add(album)
         }
+        return albumsList
     }
 
     fun addFavorite(album: Album):Boolean {
