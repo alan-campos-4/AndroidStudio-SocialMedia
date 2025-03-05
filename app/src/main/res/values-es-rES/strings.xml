@@ -40,7 +40,7 @@
     <string name="email_body">Cuerpo del email:</string>
     <string name="email_recipient_default">alvaroespi2003@gmail.com</string>
     <string name="email_subject_default">Moby Hook feedback</string>
-    <string name="go_back_menu">Volver\nal menú</string>
+    <string name="go_back_menu">Volver atrás</string>
 
     <string name="name">Name</string>
     <string name="artists">Artists</string>

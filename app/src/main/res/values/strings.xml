@@ -16,8 +16,8 @@
     <string name="tabs_vp_message">Select the tab</string>
     <string name="btnMenu">Open menu</string>
     <string name="name_needed_message">You must enter a name.</string>
-    <string name="album_added">% has been added to your favorites.</string>
-    <string name="album_removed">% is no longer in your favorites.</string>
+    <string name="album_added">Album %s has been added to your favorites.</string>
+    <string name="album_removed">Album %s is no longer in your favorites.</string>
 
     <string name="menu_part_1">Favorites</string>
     <string name="menu_part_2">Album List</string>
@@ -40,7 +40,7 @@
     <string name="email_body">Email Body:</string>
     <string name="email_recipient_default">alvaroespi2003@gmail.com</string>
     <string name="email_subject_default">Moby Hook feedback</string>
-    <string name="go_back_menu">Go back\n to the menu</string>
+    <string name="go_back_menu">Go back</string>
 
     <string name="name">Name</string>
     <string name="artists">Artists</string>

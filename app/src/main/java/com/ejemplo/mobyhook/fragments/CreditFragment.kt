@@ -21,15 +21,15 @@ class CreditFragment : Fragment() {
         _binding = FragmentCreditBinding.inflate(inflater, container, false)
 
         val btn = binding.btnSendEmail
-        btn.setOnClickListener{
+        btn.setOnClickListener {
             val i = Intent(Intent.ACTION_SEND)
             i.setType("message/rfc822")
-            i.putExtra(Intent.EXTRA_CC, binding.etEmailRecipient.text)
+            i.putExtra(Intent.EXTRA_CC, getString(R.string.email_recipient))
             i.putExtra(Intent.EXTRA_SUBJECT, binding.etEmailSubject.text)
-            i.putExtra(Intent.EXTRA_TEXT, binding.etEmailBody.text)
+            i.putExtra(Intent.EXTRA_TEXT, binding.etContent?.text)
             startActivity(Intent.createChooser(i, "Send mail..."))
         }
-        binding.btnEmailReturn.setOnClickListener{
+        binding.btnEmailReturn.setOnClickListener {
             findNavController().navigateUp()
         }
 
