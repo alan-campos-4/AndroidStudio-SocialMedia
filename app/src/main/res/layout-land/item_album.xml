@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivAlbum"
+        android:contentDescription="@string/desc_album"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:background="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tvAlbumName"
+        android:text="@string/album_placeholder"
+        android:textSize="18sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/ivAlbum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvAlbumArtist"
+        />
+
+    <TextView
+        android:id="@+id/tvAlbumArtist"
+        android:text="@string/album_placeholder"
+        android:textSize="14sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="7dp"
+        app:layout_constraintStart_toEndOf="@+id/ivAlbum"
+        app:layout_constraintEnd_toStartOf="@id/tvAlbumYear"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumName"
+        />
+
+    <TextView
+        android:id="@+id/tvAlbumYear"
+        android:text="@string/album_placeholder"
+        android:textSize="14sp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="7dp"
+        app:layout_constraintStart_toEndOf="@+id/tvAlbumArtist"
+        app:layout_constraintEnd_toStartOf="@id/btnFavorite"
+        app:layout_constraintTop_toBottomOf="@id/tvAlbumName"
+        />
+
+    <ImageButton
+        android:id="@+id/btnFavorite"
+        android:contentDescription="@string/desc_btn_favorite"
+        android:src="@drawable/ic_heart"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        app:tint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvAlbumName"
+        app:layout_constraintStart_toEndOf="@id/tvAlbumYear"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <!--android:background="@drawable/favorite_selector"-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

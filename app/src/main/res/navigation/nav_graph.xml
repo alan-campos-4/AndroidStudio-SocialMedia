@@ -30,9 +30,5 @@
         android:id="@+id/menuFragment"
         android:name="com.ejemplo.mobyhook.fragments.MenuFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" >
-        <action
-            android:id="@+id/action_menuFragment_to_viewPagerFragment"
-            app:destination="@id/viewPagerFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_menu" />
 </navigation>

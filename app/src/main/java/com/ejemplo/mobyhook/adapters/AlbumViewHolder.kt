@@ -1,6 +1,5 @@
 package com.ejemplo.mobyhook.adapters
 
-import android.content.res.Resources
 import android.graphics.Color
 import android.view.View
 import android.widget.Toast
