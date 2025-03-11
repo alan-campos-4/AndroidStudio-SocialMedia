@@ -1,11 +1,8 @@
 package com.ejemplo.mobyhook.adapters
 
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.content.res.AppCompatResources
-import androidx.core.graphics.drawable.DrawableCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ejemplo.mobyhook.Album
@@ -23,26 +20,22 @@ class FavAlbumViewHolder(view: View): RecyclerView.ViewHolder(view) {
         binding.tvFavoriteDate.text = albumModel.favoriteDate.toString()
 
         if (albumModel.isFavorite())
-            binding.btnFavorite.drawable.setTint(Color.BLACK)
-        else
             binding.btnFavorite.drawable.setTint(Color.RED)
+        else
+            binding.btnFavorite.drawable.setTint(Color.BLACK)
 
         binding.btnFavorite.setOnClickListener {
             if (albumModel.changeFavorite()) {
                 if (albumModel.isFavorite()) {
-                    binding.btnFavorite.drawable.setTint(Color.BLACK)
-                    Toast.makeText(itemView.context,
-                        this.itemView.context.getString(R.string.album_removed, albumModel.name),
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    binding.btnFavorite.drawable.setTint(Color.RED)
+                    showToast(getString(R.string.album_added, albumModel.name))
                 }
                 else {
-                    binding.btnFavorite.drawable.setTint(Color.RED)
-                    Toast.makeText(itemView.context,
-                        this.itemView.context.getString(R.string.album_added, albumModel.name),
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    binding.btnFavorite.drawable.setTint(Color.BLACK)
+                    showToast(getString(R.string.album_removed, albumModel.name))
                 }
+            } else {
+                showToast(getString(R.string.album_error))
             }
         }
 
@@ -50,5 +43,16 @@ class FavAlbumViewHolder(view: View): RecyclerView.ViewHolder(view) {
             onClickListener(albumModel)
         }
     }
+
+    private fun showToast(message: String) {
+        Toast.makeText(itemView.context, message, Toast.LENGTH_SHORT).show()
+    }
+    private fun getString(Rstring: Int): String {
+        return this.itemView.context.getString(Rstring)
+    }
+    private fun getString(Rstring: Int, name: String): String {
+        return this.itemView.context.getString(Rstring, name)
+    }
+
 
 }

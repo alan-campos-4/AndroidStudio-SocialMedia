@@ -36,7 +36,7 @@ class DetailFavItemFragment : Fragment() {
             binding.tvShowGenre.text = getString(R.string.display_genre, album.genres.toString())
             binding.tvShowMembers.text = getString(R.string.display_members, album.members.toString())
             binding.btnBack.setOnClickListener{
-                findNavController().navigate(R.id.action_detailFavItemFragment_to_favItemListFragment)
+                findNavController().navigateUp()
             }
         }
 

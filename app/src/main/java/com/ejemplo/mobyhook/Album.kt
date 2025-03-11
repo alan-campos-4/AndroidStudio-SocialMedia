@@ -12,19 +12,26 @@ data class Album (
     val label:String,
     val picture:String,
     val members:List<String>,
-    var favorite:Boolean,
     var favoriteDate:LocalDate?
 ):java.io.Serializable {
     fun changeFavorite():Boolean {
-        if (!this.favorite) {
-            this.favorite = true
+        if (this.isFavorite()) {
+            return Constants.removeFavorite(this)
+        }
+        else {
             this.favoriteDate = LocalDate.now()
             return Constants.addFavorite(this)
         }
-        else {
-            this.favorite = false
-            return Constants.removeFavorite(this)
-        }
     }
-    fun isFavorite():Boolean { return this.favorite }
+
+    fun isFavorite():Boolean {
+        if (Constants.getFavorites().isNotEmpty()) {
+            for (album in Constants.getFavorites()) {
+                if (album.id == this.id) {
+                    return true
+                }
+            }
+        }
+        return false
+    }
 }

@@ -16,8 +16,9 @@
     <string name="tabs_vp_message">Selecciona la pestaña</string>
     <string name="btnMenu">Abrir menú</string>
     <string name="name_needed_message">Debes introducir un nombre.</string>
-    <string name="album_added">% ha sido añadido a tus favoritos.</string>
-    <string name="album_removed">% ya no está en tus favorites.</string>
+    <string name="album_added">%s se ha añadido a tus favoritos.</string>
+    <string name="album_removed">%s ya no está en tus favoritos.</string>
+    <string name="album_error">Este álbum no se pudo mover.</string>
 
     <string name="menu_part_1">Favoritos</string>
     <string name="menu_part_2">Lista de álbumes</string>

@@ -26,25 +26,31 @@ class AlbumViewHolder(view: View): RecyclerView.ViewHolder(view) {
         binding.btnFavorite.setOnClickListener {
             if (albumModel.changeFavorite()) {
                 if (albumModel.isFavorite()) {
-                    binding.btnFavorite.drawable.setTint(Color.BLACK)
-                    Toast.makeText(itemView.context,
-                        this.itemView.context.getString(R.string.album_removed, albumModel.name),
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    binding.btnFavorite.drawable.setTint(Color.RED)
+                    showToast(getString(R.string.album_added, albumModel.name))
                 }
                 else {
-                    binding.btnFavorite.drawable.setTint(Color.RED)
-                    Toast.makeText(itemView.context,
-                        this.itemView.context.getString(R.string.album_added, albumModel.name),
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    binding.btnFavorite.drawable.setTint(Color.BLACK)
+                    showToast(getString(R.string.album_removed, albumModel.name))
                 }
+            } else {
+                showToast(getString(R.string.album_error))
             }
         }
 
         itemView.setOnClickListener {
             onClickListener(albumModel)
         }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(itemView.context, message, Toast.LENGTH_SHORT).show()
+    }
+    private fun getString(Rstring: Int): String {
+        return this.itemView.context.getString(Rstring)
+    }
+    private fun getString(Rstring: Int, name: String): String {
+        return this.itemView.context.getString(Rstring, name)
     }
 
 }

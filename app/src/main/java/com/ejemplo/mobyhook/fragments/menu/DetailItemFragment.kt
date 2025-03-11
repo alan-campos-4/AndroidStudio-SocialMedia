@@ -33,7 +33,7 @@ class DetailItemFragment : Fragment() {
             binding.tvShowTracks.text = getString(R.string.display_track, album.numTracks.toString())
             binding.tvShowGenre.text = getString(R.string.display_genre, album.genres)
             binding.btnBack.setOnClickListener{
-                findNavController().navigate(R.id.action_detailItemFragment_to_itemListFragment)
+                findNavController().navigateUp()
             }
         }
         return binding.root

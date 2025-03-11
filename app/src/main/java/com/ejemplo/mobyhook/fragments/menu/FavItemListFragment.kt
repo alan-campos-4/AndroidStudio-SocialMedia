@@ -29,7 +29,7 @@ class FavItemListFragment : Fragment() {
         val manager = LinearLayoutManager(binding.rvFavItemList.context)
         binding.rvFavItemList.layoutManager = manager
         binding.rvFavItemList.adapter = FavAlbumAdapter(
-            Constants.initFavorites()) { album -> onItemSelected(album) }
+            Constants.getFavorites()) { album -> onItemSelected(album) }
     }
 
     private fun onItemSelected(album: Album) {
